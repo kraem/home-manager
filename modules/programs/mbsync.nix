@@ -119,7 +119,7 @@ let
               "";
         in genSection "Channel ${groupName}-${channel.name}" ({
           Far = ":${storeName}-remote:${channel.farPattern}";
-          Far = ":${storeName}-local:${channel.nearPattern}";
+          Near = ":${storeName}-local:${channel.nearPattern}";
         } // channel.extraConfig) + genChannelPatterns channel.patterns;
       # Given the group name, and a attr set of channels within that group,
       # Generate a list of strings for each channels' configuration.
